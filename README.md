@@ -1,5 +1,9 @@
 # LLM-Based Resume Analyzer, ATS Score, and JD Match Analyzer
 
+## Live Demo
+You can try out the live demo of the application here: [Smart ATS Run Easy](https://smart-ats-run-easy.streamlit.app/)
+
+
 ## Objective
 
 This project involves developing an end-to-end Applicant Tracking System (ATS) using the Google Gemini Pro Vision API. The system analyzes resumes, compares them with job descriptions, and provides actionable suggestions for enhancing resumes to better match job requirements.
