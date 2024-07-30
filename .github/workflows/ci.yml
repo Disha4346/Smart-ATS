@@ -17,18 +17,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        node-version: '14'
+        python-version: '3.x'  # Specify the version of Python you need
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Use SECRET_KEY from GitHub Secrets
+    - name: Run script with SECRET_KEY
       env:
         SECRET_KEY: ${{ secrets.GOOGLE_API_KEY }}
       run: |
-        echo "Using secret key in environment: $SECRET_KEY"
-        # Your commands that use the SECRET_KEY
-        node your_script.js
+        python app.py
