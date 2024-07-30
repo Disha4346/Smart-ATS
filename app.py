@@ -13,7 +13,9 @@ api_key=os.getenv("SECRET_KEY")
 
 def get_gemini_repsonse(input):
     model=genai.GenerativeModel('gemini-pro')
-    response=model.generate_content(input)
+    client = GenerativeLanguageServiceClient(api_key=api_key)
+    response = client.generate_content(prompt=input_prompt)
+    #response=model.generate_content(input)
     return response.text
 
 def input_pdf_text(uploaded_file):
