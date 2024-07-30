@@ -4,18 +4,14 @@ import os
 import PyPDF2 as pdf
 from dotenv import load_dotenv
 from streamlit_player import st_player
-from google.generativeai import GenerativeLanguageServiceClient
-
 
 load_dotenv() ## load all our environment variables
 
-api_key=os.getenv("SECRET_KEY")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_repsonse(input):
     model=genai.GenerativeModel('gemini-pro')
-    client = GenerativeLanguageServiceClient(api_key=api_key)
-    response = client.generate_content(prompt=input_prompt)
-    #response=model.generate_content(input)
+    response=model.generate_content(input)
     return response.text
 
 def input_pdf_text(uploaded_file):
