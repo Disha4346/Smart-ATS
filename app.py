@@ -7,7 +7,7 @@ from streamlit_player import st_player
 
 load_dotenv() ## load all our environment variables
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_repsonse(input):
     model=genai.GenerativeModel('gemini-pro')
