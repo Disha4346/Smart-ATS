@@ -29,6 +29,6 @@ jobs:
 
     - name: Run script with SECRET_KEY
       env:
-        SECRET_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        SECRET_KEY: ${{ secrets.SECRET_KEY}}
       run: |
         python app.py
