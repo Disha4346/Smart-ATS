@@ -51,7 +51,7 @@ st.sidebar.markdown("---")
 
 def print_praise():
     praise_quotes = """
-    Disha Gupta
+    Kunj Bhasin
     """
     title = "**Created By -**\n\n"
     return title + praise_quotes
