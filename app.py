@@ -46,7 +46,7 @@ st.set_page_config(page_title='Resume Analyzer',
                    page_icon="🔍")
 st.sidebar.title("🎨 Smart ATS 🎨")
 with st.sidebar.container(): 
-    st.image('res.jpeg', use_column_width=True, caption='Resume analzer')
+    st.image('res.jpeg', use_container_width=True, caption='Resume analzer')
 st.sidebar.markdown("---")
 
 def print_praise():
